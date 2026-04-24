@@ -1,0 +1,75 @@
+// ASTRAEUS — Prisma schema (PostgreSQL)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  username  String   @unique
+  /** 对外展示的 12 位数字编号，唯一 */
+  publicUid String?  @unique
+  password  String
+  nickname  String?
+  images    Image[]
+  createdAt DateTime @default(now())
+  avatar    String?  @default("/avatar.png")
+  bio       String?
+
+  imageLikes   ImageLike[]
+  followers    Follow[]    @relation("following")
+  following    Follow[]    @relation("follower")
+
+  followerCount Int     @default(0)
+  /** 禁言：无法上传、点赞 */
+  muted         Boolean @default(false)
+
+  @@map("astraeus_user")
+}
+
+model Image {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  /** 与画廊分类一致的标签 */
+  tags        String[] @default([])
+  url         String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  createdAt   DateTime @default(now())
+
+  likes     ImageLike[]
+  likeCount Int       @default(0)
+
+  @@map("astraeus_image")
+}
+
+model ImageLike {
+  id        String   @id @default(uuid())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  image     Image    @relation(fields: [imageId], references: [id], onDelete: Cascade)
+  imageId   String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, imageId])
+  @@map("astraeus_image_like")
+}
+
+model Follow {
+  id          String   @id @default(uuid())
+  follower    User     @relation("follower", fields: [followerId], references: [id], onDelete: Cascade)
+  followerId  String
+  following   User     @relation("following", fields: [followingId], references: [id], onDelete: Cascade)
+  followingId String
+  createdAt   DateTime @default(now())
+
+  @@unique([followerId, followingId])
+  @@map("astraeus_follow")
+}

@@ -1,0 +1,49 @@
+{
+  "name": "astraeus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ASTRAEUS 图文分享",
+  "author": "ASTRAEUS",
+  "prisma": {
+    "seed": "node prisma/seed.mjs"
+  },
+  "scripts": {
+    "dev": "cross-env NEXTAUTH_URL=http://localhost:3000 next dev --turbopack -p 3000",
+    "dev:3000": "cross-env NEXTAUTH_URL=http://localhost:3000 next dev --turbopack -p 3000",
+    "dev:3001": "cross-env NEXTAUTH_URL=http://localhost:3001 next dev --turbopack -p 3001",
+    "dev:3002": "cross-env NEXTAUTH_URL=http://localhost:3002 next dev --turbopack -p 3002",
+    "dev:3003": "cross-env NEXTAUTH_URL=http://localhost:3003 next dev --turbopack -p 3003",
+    "dev:all": "concurrently -n \"3000,3001,3002,3003\" -c blue,magenta,green,yellow \"npm run dev:3000\" \"npm run dev:3001\" \"npm run dev:3002\" \"npm run dev:3003\"",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.9.0",
+    "@vercel/blob": "^2.3.2",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "formidable": "^3.5.4",
+    "next": "^15.5.14",
+    "next-auth": "^4.24.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/formidable": "^3.4.5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "prisma": "^6.9.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
