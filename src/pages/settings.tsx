@@ -175,7 +175,7 @@ export default function SettingsPage() {
   return (
     <>
       <Head>
-        <title>个人设置 | ASTRAEUS</title>
+        <title>个人设置 | Astraus</title>
       </Head>
       <Navbar ref={navbarRef} />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}

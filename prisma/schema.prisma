@@ -1,4 +1,4 @@
-// ASTRAEUS — Prisma schema (PostgreSQL)
+// Astraus — Prisma schema (PostgreSQL)
 
 generator client {
   provider = "prisma-client-js"
@@ -30,7 +30,7 @@ model User {
   /** 禁言：无法上传、点赞 */
   muted         Boolean @default(false)
 
-  @@map("astraeus_user")
+  @@map("astraus_user")
 }
 
 model Image {
@@ -47,7 +47,7 @@ model Image {
   likes     ImageLike[]
   likeCount Int       @default(0)
 
-  @@map("astraeus_image")
+  @@map("astraus_image")
 }
 
 model ImageLike {
@@ -59,7 +59,7 @@ model ImageLike {
   createdAt DateTime @default(now())
 
   @@unique([userId, imageId])
-  @@map("astraeus_image_like")
+  @@map("astraus_image_like")
 }
 
 model Follow {
@@ -71,5 +71,5 @@ model Follow {
   createdAt   DateTime @default(now())
 
   @@unique([followerId, followingId])
-  @@map("astraeus_follow")
+  @@map("astraus_follow")
 }

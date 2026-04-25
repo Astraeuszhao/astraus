@@ -11,8 +11,8 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
     <SessionProvider session={session}>
       <ThemeInit />
       <Head>
-        <title>ASTRAEUS</title>
-        <meta name="description" content="ASTRAEUS — 登录后浏览与分享图片。" />
+        <title>Astraus</title>
+        <meta name="description" content="Astraus — 登录后浏览与分享图片。" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AvatarProvider>

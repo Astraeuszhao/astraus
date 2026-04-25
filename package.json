@@ -1,9 +1,9 @@
 {
-  "name": "astraeus",
+  "name": "astraus",
   "version": "1.0.0",
   "private": true,
-  "description": "ASTRAEUS 图文分享",
-  "author": "ASTRAEUS",
+  "description": "Astraus 图文分享",
+  "author": "Astraus",
   "prisma": {
     "seed": "node prisma/seed.mjs"
   },

@@ -45,7 +45,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           select: { id: true, email: true, username: true, publicUid: true, nickname: true, avatar: true, bio: true },
         });
       }
-      const { id: _omit, ...rest } = user;
+      const { id, ...rest } = user;
+      void id;
       return res.status(200).json(rest);
     }
 
@@ -99,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
 
         if (process.env.USE_BLOB_STORAGE === "true") {
-          const fileName = `astraeus/avatars/${userEmail}-avatar${path.extname(avatarFile.originalFilename || "")}`;
+          const fileName = `astraus/avatars/${userEmail}-avatar${path.extname(avatarFile.originalFilename || "")}`;
           const stream = fs.createReadStream(avatarFile.filepath);
           const blob = await put(fileName, stream, {
             access: "public",

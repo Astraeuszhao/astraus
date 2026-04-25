@@ -64,7 +64,7 @@ export default function Register() {
   return (
     <>
       <Head>
-        <title>注册 | ASTRAEUS</title>
+        <title>注册 | Astraus</title>
       </Head>
       <Navbar />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}

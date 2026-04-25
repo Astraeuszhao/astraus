@@ -123,14 +123,14 @@ export default function PublicProfile({
     <>
       <Head>
         <title>
-          {user ? `${user.username} 的主页 | ASTRAEUS` : "用户不存在 | ASTRAEUS"}
+          {user ? `${user.username} 的主页 | Astraus` : "用户不存在 | Astraus"}
         </title>
         <meta
           name="description"
           content={
             user
-              ? `查看 @${user.username} 的公开主页与作品 · ASTRAEUS`
-              : "ASTRAEUS 上未找到该用户。"
+              ? `查看 @${user.username} 的公开主页与作品 · Astraus`
+              : "Astraus 上未找到该用户。"
           }
         />
       </Head>

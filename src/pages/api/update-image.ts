@@ -25,18 +25,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(429).json({ message: `更新过于频繁，请 ${wait} 秒后再试。` });
   }
 
-  let { id, title, description, tags: tagsBody } = req.body as {
+  const body = req.body as {
     id?: string;
     title?: string;
     description?: string;
     tags?: unknown;
   };
 
-  // Sanitize
-  id = typeof id === "string" ? id.trim() : "";
-  title = typeof title === "string" ? title.trim() : "";
-  description = typeof description === "string" ? description.trim() : "";
-  const tags = normalizeImageTags(tagsBody, 8);
+  const id = typeof body.id === "string" ? body.id.trim() : "";
+  const title = typeof body.title === "string" ? body.title.trim() : "";
+  const description = typeof body.description === "string" ? body.description.trim() : "";
+  const tags = normalizeImageTags(body.tags, 8);
 
   // Validate
   if (!id || !title || !description) {

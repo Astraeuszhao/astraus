@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { Prisma } from "@prisma/client";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Prisma } from "@prisma/client";
 import { GALLERY_CATEGORY_FILTERS } from "@/constants/galleryFilters";
 
 const prisma = new PrismaClient();
@@ -17,14 +16,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (q) {
       and.push({
         OR: [
-          { title: { contains: q, mode: "insensitive" } },
-          { description: { contains: q, mode: "insensitive" } },
+          { title: { contains: q, mode: Prisma.QueryMode.insensitive } },
+          { description: { contains: q, mode: Prisma.QueryMode.insensitive } },
           { tags: { has: q } },
           {
             user: {
               OR: [
-                { username: { contains: q, mode: "insensitive" } },
-                { nickname: { contains: q, mode: "insensitive" } },
+                { username: { contains: q, mode: Prisma.QueryMode.insensitive } },
+                { nickname: { contains: q, mode: Prisma.QueryMode.insensitive } },
                 { publicUid: { contains: q } },
               ],
             },
@@ -38,8 +37,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         OR: [
           { tags: { has: catParam } },
           ...catDef.keywords.flatMap((kw) => [
-            { title: { contains: kw, mode: "insensitive" } },
-            { description: { contains: kw, mode: "insensitive" } },
+            { title: { contains: kw, mode: Prisma.QueryMode.insensitive } },
+            { description: { contains: kw, mode: Prisma.QueryMode.insensitive } },
           ]),
         ],
       });

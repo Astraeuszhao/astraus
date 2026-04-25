@@ -212,7 +212,7 @@ async function main() {
       const post = p.posts[j];
       const fname = `seed-${p.username}-${j}.jpg`;
       const diskPath = path.join(uploadsDir, fname);
-      const seedKey = `ae-${p.username}-${j}-${imageCounter}`;
+      const seedKey = `as-${p.username}-${j}-${imageCounter}`;
       await downloadImage(
         `https://picsum.photos/seed/${encodeURIComponent(seedKey)}/900/650`,
         diskPath,

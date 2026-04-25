@@ -236,7 +236,7 @@ export default function ProfilePage() {
   return (
     <>
     <Head>
-        <title>我的资料 | ASTRAEUS</title>
+        <title>我的资料 | Astraus</title>
     </Head>
       <Navbar ref={navbarRef} />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}

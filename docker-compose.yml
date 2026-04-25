@@ -1,11 +1,11 @@
 services:
   db:
     image: postgres:15-alpine
-    container_name: astraeus-db
+    container_name: astraus-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: astraeus_dev
+      POSTGRES_DB: astraus_dev
     ports:
       - "5432:5432"
     volumes:

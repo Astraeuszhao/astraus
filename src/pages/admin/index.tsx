@@ -142,12 +142,12 @@ export default function AdminDashboardPage() {
   return (
     <>
       <Head>
-        <title>ASTRAEUS · 后台</title>
+        <title>Astraus · 后台</title>
       </Head>
       <div className="min-h-screen bg-zinc-950 text-zinc-100 pb-16">
         <header className="sticky top-0 z-20 border-b border-zinc-800 bg-zinc-950/95 backdrop-blur px-4 py-3 flex flex-wrap items-center justify-between gap-3">
           <div>
-            <h1 className="text-lg font-semibold text-white">ASTRAEUS</h1>
+            <h1 className="text-lg font-semibold text-white">Astraus</h1>
             <p className="text-xs text-zinc-500">管理控制台</p>
           </div>
           <div className="flex items-center gap-2">

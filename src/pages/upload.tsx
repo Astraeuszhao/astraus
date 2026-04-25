@@ -94,7 +94,7 @@ export default function Upload() {
   return (
     <>
       <Head>
-        <title>上传 | ASTRAEUS</title>
+        <title>上传 | Astraus</title>
       </Head>
       <Navbar />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}

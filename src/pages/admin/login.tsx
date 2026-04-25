@@ -30,10 +30,10 @@ export default function AdminLoginPage() {
   return (
     <>
       <Head>
-        <title>ASTRAEUS · 后台登录</title>
+        <title>Astraus · 后台登录</title>
       </Head>
       <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-950 px-4">
-        <h1 className="text-2xl font-semibold text-white tracking-tight">ASTRAEUS</h1>
+        <h1 className="text-2xl font-semibold text-white tracking-tight">Astraus</h1>
         <p className="text-zinc-500 text-sm mt-1 mb-10">管理后台</p>
         <form onSubmit={submit} className="w-full max-w-sm space-y-4">
           <input

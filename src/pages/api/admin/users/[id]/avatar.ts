@@ -46,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       if (process.env.USE_BLOB_STORAGE === "true") {
-        const fileName = `astraeus/avatars/admin-${id}${path.extname(avatarFile.originalFilename || "")}`;
+        const fileName = `astraus/avatars/admin-${id}${path.extname(avatarFile.originalFilename || "")}`;
         const stream = fs.createReadStream(avatarFile.filepath);
         const blob = await put(fileName, stream, { access: "public", allowOverwrite: true });
         avatarPath = blob.url;

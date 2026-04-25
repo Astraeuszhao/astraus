@@ -1,4 +1,4 @@
-# ASTRAEUS
+# Astraus
 
 图文分享站点：注册登录、上传、公开画廊、点赞与关注、个人资料与设置、管理后台（`/admin`）。
 
@@ -25,7 +25,7 @@ prisma/seed.mjs
 ## 环境与数据库
 
 1. 复制 `.env.example` 为 `.env`。
-2. PostgreSQL：本机实例，或 **`docker compose up -d`**（默认库 **`astraeus_dev`**，与 `.env.example` 中 `DATABASE_URL` 一致）。
+2. PostgreSQL：本机实例，或 **`docker compose up -d`**（默认库 **`astraus_dev`**，与 `.env.example` 中 `DATABASE_URL` 一致）。
 3. `npx prisma migrate deploy`
 4. （可选）`npx prisma db seed`
 5. `npm install` → `npm run dev`（端口见 `package.json`）
