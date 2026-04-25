@@ -1,8 +1,8 @@
-# PixelNest（仓库名：`astraus`）
+# PixelNest（仓库名：`pixelnest`）
 
 > **PixelNest** 是面向访客的公开图片画廊与社区功能品牌；本仓库为 **Astraus** 维护的全栈实现（Next.js + Prisma + PostgreSQL）。
 
-- **GitHub 源码**：[Astraeuszhao/astraus](https://github.com/Astraeuszhao/astraus)（`git clone`、Issue、PR 均在此；npm / `package.json` 的 `repository` 字段也指向该地址）
+- **GitHub 源码**：[Astraeuszhao/pixelnest](https://github.com/Astraeuszhao/pixelnest)（`git clone`、Issue、PR 均在此；`package.json` 的 `repository` 同址）
 - 在 GitHub 上打开仓库时，如尚未填写 **About** 说明，可写一句：`PixelNest — public image gallery (Next.js + Prisma). Maintained by Astraus.` 并加 topics：`nextjs` `prisma` `image-gallery` 等
 
 |  | 技术 |

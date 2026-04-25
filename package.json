@@ -1,17 +1,17 @@
 {
-  "name": "astraus",
+  "name": "pixelnest",
   "version": "1.0.0",
   "private": true,
   "description": "PixelNest — 公开图片画廊与社区（Next.js + Prisma + PostgreSQL）",
   "author": "Astraus",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Astraeuszhao/astraus.git"
+    "url": "https://github.com/Astraeuszhao/pixelnest.git"
   },
   "bugs": {
-    "url": "https://github.com/Astraeuszhao/astraus/issues"
+    "url": "https://github.com/Astraeuszhao/pixelnest/issues"
   },
-  "homepage": "https://github.com/Astraeuszhao/astraus#readme",
+  "homepage": "https://github.com/Astraeuszhao/pixelnest#readme",
   "prisma": {
     "seed": "node prisma/seed.mjs"
   },
