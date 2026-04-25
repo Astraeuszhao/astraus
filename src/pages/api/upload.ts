@@ -141,7 +141,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         } catch (e) {
           console.error("upload sharp (blob)", e);
         }
-        const fileName = `astraus/${Date.now()}-${Math.random().toString(36).slice(2)}.jpg`;
+        const fileName = `pixelnest/${Date.now()}-${Math.random().toString(36).slice(2)}.jpg`;
         const stream = fs.createReadStream(streamPath);
         const blob = await put(fileName, stream, { access: "public" });
         imageUrl = blob.url;

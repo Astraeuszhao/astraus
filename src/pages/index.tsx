@@ -226,14 +226,14 @@ export default function PublicGallery() {
   return (
     <>
       <Head>
-        <title>首页 | Astraus</title>
+        <title>首页 | PixelNest</title>
       </Head>
       <Navbar />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
       <div className="max-w-[90rem] w-full md:mx-4 lg:mx-auto mt-8 px-0">
         <h2 className="text-2xl font-bold mb-2 mx-4 sm:mx-auto">公开画廊</h2>
         <p className="mb-4 mx-4 sm:mx-auto text-bg text-base">
-          在 Astraus 发现与分享你喜欢的瞬间！
+          在 PixelNest 发现与分享你喜欢的瞬间！
         </p>
 
         <div className="mx-4 sm:mx-auto mb-8 flex flex-col items-stretch sm:items-center gap-4">

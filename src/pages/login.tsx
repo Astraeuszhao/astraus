@@ -57,7 +57,7 @@ export default function Login() {
   return (
     <>
       <Head>
-        <title>登录 | Astraus</title>
+        <title>登录 | PixelNest</title>
       </Head>
       <Navbar />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}

@@ -100,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
 
         if (process.env.USE_BLOB_STORAGE === "true") {
-          const fileName = `astraus/avatars/${userEmail}-avatar${path.extname(avatarFile.originalFilename || "")}`;
+          const fileName = `pixelnest/avatars/${userEmail}-avatar${path.extname(avatarFile.originalFilename || "")}`;
           const stream = fs.createReadStream(avatarFile.filepath);
           const blob = await put(fileName, stream, {
             access: "public",

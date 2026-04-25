@@ -94,7 +94,7 @@ export default function Upload() {
   return (
     <>
       <Head>
-        <title>上传 | Astraus</title>
+        <title>上传 | PixelNest</title>
       </Head>
       <Navbar />
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}

@@ -112,15 +112,15 @@ export default function ImagePage({ image }: { image: ImageDetails | null }) {
       <Head>
         <title>
           {image
-            ? `${image.title} · @${image.user.username} | Astraus`
-            : "未找到图片 | Astraus"}
+            ? `${image.title} · @${image.user.username} | PixelNest`
+            : "未找到图片 | PixelNest"}
         </title>
         <meta
           name="description"
           content={
             image
-              ? `${image.title} - ${image.description} | @${image.user.username} 的作品 · Astraus`
-              : "Astraus 上未找到该图片。"
+              ? `${image.title} - ${image.description} | @${image.user.username} 的作品 · PixelNest`
+              : "PixelNest 上未找到该图片。"
           }
         />
       </Head>

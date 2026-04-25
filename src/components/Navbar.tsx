@@ -107,7 +107,7 @@ const Navbar = forwardRef(function Navbar(_props, ref) {
                 href="/"
                 className="font-bold text-xl sm:text-2xl tracking-tight text-black dark:text-white hover:opacity-90 transition leading-none"
               >
-                Astraus
+                PixelNest
               </Link>
             </div>
 
